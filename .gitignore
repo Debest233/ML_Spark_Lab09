@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+.idea/
+titanic.csv
+output_kaggle.csv
