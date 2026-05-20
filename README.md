@@ -1,23 +1,15 @@
 # Laboratorium 09 - Wprowadzenie do Apache Spark i PySpark
 
-**Wydział Telekomunikacji, Informatyki i Elektrotechniki**  
-**Politechnika Bydgoska im. Jana i Jędrzeja Śniadeckich**  
-**Kierunek: Informatyka Stosowana**
-
 ## Cel ćwiczenia
-Celem laboratorium było poznanie podstaw Apache Spark oraz wykorzystanie biblioteki PySpark do przetwarzania danych. Ćwiczenie obejmowało konfigurację środowiska, pracę z DataFrame oraz podstawowe operacje na RDD.
-
----
+Celem laboratorium było poznanie podstaw Apache Spark oraz wykorzystanie biblioteki PySpark do przetwarzania danych. 
 
 # Zadanie 1: Uruchomienie lokalnej instancji Apache Spark
 
-Zainstalowano bibliotekę `pyspark` w środowisku Python oraz skonfigurowano zmienne środowiskowe `PYSPARK_PYTHON` i `PYSPARK_DRIVER_PYTHON`, aby poprawnie uruchomić Spark w systemie Windows.
+Zainstalowano bibliotekę `pyspark` w środowisku Python oraz skonfigurowano zmienne środowiskowe.
 
-Poprawne działanie środowiska potwierdzono uruchomieniem powłoki PySpark.
 
 ![Zadanie 1](zad1_shell.png)
 
----
 
 # Zadanie 2: Podstawowe operacje na DataFrame w PySpark
 
@@ -32,11 +24,10 @@ Do ćwiczenia wykorzystano zbiór danych Titanic pobrany z platformy Kaggle. Wyk
 
 ![Zadanie 2](zad2_dataframe.png)
 
----
 
 # Zadanie 3: Praca z RDD w PySpark
 
-W ostatnim zadaniu wykorzystano niskopoziomowe API RDD. Dane zostały wczytane do pamięci i przekazane do Sparka za pomocą `sc.parallelize()`.
+W ostatnim zadaniu wykorzystano RDD. Dane zostały wczytane do pamięci i przekazane do Sparka za pomocą `sc.parallelize()`.
 
 Wykonano:
 
@@ -46,7 +37,6 @@ Wykonano:
 
 ![Zadanie 3](zad3_rdd.png)
 
----
 
 # Wnioski
 

@@ -20,22 +20,18 @@ rdd_text = sc.parallelize(lines)
 header = lines[0]
 rdd_data = rdd_text.filter(lambda line: line != header)
 
-# Transformacja MAP - parsowanie wierszy z tekstu na listę
 def parse_line(line):
     return next(csv.reader([line.strip()]))
 
 rdd_parsed = rdd_data.map(parse_line)
 
-# Akcja COUNT - zliczanie wszystkich pasażerów
 total_passengers = rdd_parsed.count()
 print(f"Całkowita liczba pasażerów (liczba wierszy): {total_passengers}")
 
-# Transformacja FILTER - wybieramy tylko tych, którzy ocaleli
 rdd_survived = rdd_parsed.filter(lambda cols: cols[1] == '1')
 survived_count = rdd_survived.count()
 print(f"Liczba ocalałych pasażerów: {survived_count}")
 
-# Transformacja MAP i Akcja REDUCE - suma opłat za bilety
 def get_fare(cols):
     try:
         return float(cols[9])
